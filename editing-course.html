@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كورس المونتاج</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f9f9f9;
+        }
+
+        section {
+            border: 8px solid rgb(210, 39, 133); /* سمك الحواف أكبر */
+            border-radius: 80px; /* تكبير الحواف */
+            padding: 60px; /* تكبير المسافة داخل المربع */
+            margin: 60px; /* تكبير المسافة بين المربعات */
+            width: 95%; /* زيادة العرض */
+            max-width: 900px; /* تكبير الحجم الأقصى */
+            background-color: white;
+        }
+
+        h1 {
+            color: rgb(210, 39, 133);
+            text-align: center;
+        }
+
+        button {
+            padding: 15px 30px; /* تكبير الأزرار */
+            background-color: rgb(210, 39, 133);
+            color: white;
+            border: 6px solid rgb(210, 39, 133); /* تكبير سمك الحواف */
+            border-radius: 10px; /* تكبير الحواف */
+            cursor: pointer;
+            margin: 20px;
+        }
+
+        button:hover {
+            background-color: rgb(180, 30, 120);
+        }
+
+        .video-container {
+            margin: 30px;
+        }
+
+        iframe {
+            width: 100%;
+            max-width: 1000px; /* تكبير عرض الفيديو */
+            height: 600px; /* تكبير ارتفاع الفيديو */
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>كورس المونتاج</h1>
+    </section>
+    
+    <!-- زر الرجوع -->
+    <button onclick="goBackToCourses()">رجوع إلى الكورسات المتاحة</button>
+
+    <!-- فيديوهات -->
+    <div class="video-container">
+        <h2>الفيديو الأول</h2>
+        <button onclick="playVideo('editing-video1')">شغل الفيديو</button>
+        <div id="editing-video1" style="display:none; margin-top: 10px;">
+            <iframe src="https://www.youtube.com/embed/your_video_1" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <h2>الفيديو الثاني</h2>
+        <button onclick="playVideo('editing-video2')">شغل الفيديو</button>
+        <div id="editing-video2" style="display:none; margin-top: 10px;">
+            <iframe src="https://www.youtube.com/embed/your_video_2" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <h2>الفيديو الثالث</h2>
+        <button onclick="playVideo('editing-video3')">شغل الفيديو</button>
+        <div id="editing-video3" style="display:none; margin-top: 10px;">
+            <iframe src="https://www.youtube.com/embed/your_video_3" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <h2>الفيديو الرابع</h2>
+        <button onclick="playVideo('editing-video4')">شغل الفيديو</button>
+        <div id="editing-video4" style="display:none; margin-top: 10px;">
+            <iframe src="https://www.youtube.com/embed/your_video_4" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <h2>الفيديو الخامس</h2>
+        <button onclick="playVideo('editing-video5')">شغل الفيديو</button>
+        <div id="editing-video5" style="display:none; margin-top: 10px;">
+            <iframe src="https://www.youtube.com/embed/your_video_5" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script>
+        // دالة تشغيل الفيديو
+        function playVideo(videoId) {
+            document.getElementById(videoId).style.display = 'block';
+        }
+
+        // دالة الرجوع إلى الكورسات المتاحة
+        function goBackToCourses() {
+            window.location.href = 'courses.html'; // قم بتغيير "courses.html" إذا كان اسم الملف مختلفًا.
+        }
+    </script>
+</body>
+</html>
